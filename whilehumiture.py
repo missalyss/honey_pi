@@ -11,7 +11,8 @@ while True:
     query = {'temperature': temperature, 'humidity': humidity, 'date_recorded': today, 'user_id': 1}
     
     if today.second % 2 == 0:
-        res = requests.post(url, data=query)
-        print(res.text, today.minute, today.second)
+        #res = requests.post(url, data=query)
+        print(today.strftime('%m-%d-%y %H:%M:%S %z-0800'))
+        #print("{today}", "{today.month} {today.day} {today.hour}:{today.minute}:{today.second}")
         #print(query)
-        print('Temp: {0:0.1f} C., Humidity: {1:0.1f}%'.format(temperature, humidity))
+        #print('Temp: {0:0.1f} C., Humidity: {1:0.1f}%'.format(temperature, humidity))
